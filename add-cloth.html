@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Cloth - Smart Cloth Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-header">
+                <h1 class="logo">👕 Smart Closet</h1>
+                <button class="mobile-menu-btn" 
+                        aria-label="Toggle navigation menu" 
+                        aria-expanded="false">
+                    <span class="menu-icon">
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                    </span>
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="add-cloth.html" class="active">Add Cloth</a></li>
+                <li><a href="view-clothes.html">My Clothes</a></li>
+                <li><a href="combinations.html">Combinations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="nav-overlay"></div>
+
+    <main class="container">
+        <div class="form-container" style="max-width: 600px; margin: 2rem auto; padding: 1.5rem; background: #fff; border-radius: 0.5rem; box-shadow: var(--shadow);">
+            
+            <h2 id="pageTitle">Add New Clothing Item</h2>
+            
+            <form id="addClothForm" class="cloth-form">
+                <div class="form-group">
+                    <label for="cloth-category">Category</label>
+                    <select id="cloth-category" name="cloth-category" class="form-control" required>
+                        <option value="">Select a category</option>
+                        <option value="T-Shirt">T-Shirt</option>
+                        <option value="Shirt">Shirt</option>
+                        <option value="Jeans">Jeans</option>
+                        <option value="Pants">Pants</option>
+                        <option value="Jacket">Jacket</option>
+                        <option value="Sweater">Sweater</option>
+                        <option value="Dress">Dress</option>
+                        <option value="Skirt">Skirt</option>
+                        <option value="Shorts">Shorts</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cloth-color">Color</label>
+                    <input type="color" id="cloth-color" name="cloth-color" class="form-control" value="#4f46e5" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cloth-image">Upload Image</label>
+                    <input type="file" id="cloth-image" name="cloth-image" accept="image/*" class="form-control">
+                    <div class="image-preview mt-2">
+                        <img id="image-preview" src="" alt="Preview" style="max-width: 200px; display: none; border-radius: 0.25rem;">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cloth-notes">Notes</label>
+                    <textarea id="cloth-notes" name="cloth-notes" class="form-control" rows="3" placeholder="Add any notes about this item..."></textarea>
+                </div>
+                
+                <div class="form-actions" style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1.5rem;">
+                    <button type="submit" id="submitBtn" class="btn btn-primary">Save Item</button>
+                    <a href="view-clothes.html" class="btn btn-cancel">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
